@@ -1,0 +1,10 @@
+
+[5/15/2017 11:58:56 AM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/15/2017 12:15:15 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/15/2017 12:20:46 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/15/2017 12:45:10 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/15/2017 12:48:19 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]

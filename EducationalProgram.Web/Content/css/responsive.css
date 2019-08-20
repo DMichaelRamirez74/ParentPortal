@@ -1,0 +1,40 @@
+@media only screen and (max-width:500px) 
+{
+#book_info .inner_parent_info{left: inherit !important; max-width: 90%;}
+.inner_parent_info{max-width:90%;}
+}
+
+@media only screen and (max-width:479px) 
+{
+.rd_lst_sub1 div:first-child{width:47% !important}
+.rd_lst_sub1 .radio.radio-info{width:47% !important;}
+.hero-unit{max-width:100% !important;}
+}
+
+@media only screen and (max-width:390px) 
+{
+.sub_parent_lst h2{font-size:21px;}
+}
+
+@media only screen and (max-width:639px) 
+{
+#parent_info_main .container{ background:none;}
+.inner_parent_info .sub_parent_lst{background:rgba(48, 92, 138, 0.9) none repeat scroll 0 0 !important;}
+}
+
+@media only screen and (min-width:640px) and (max-width:979px)
+{
+.inner_parent_info .sub_parent_lst{background:rgba(48, 92, 138, 0.9) none repeat scroll 0 0 !important;}
+}
+
+@media only screen and (max-width:767px) 
+{
+span.new {margin-bottom: 7px !important;margin-top: 12px !important;}
+.location_header h4{font-size:25px !important;}
+}
+
+@media only screen and (min-width:768px) and (max-width:796px)
+{
+ .loct_form .primary{padding-right:2px;}
+ .loct_form .secondary{padding-left:2px;}
+}

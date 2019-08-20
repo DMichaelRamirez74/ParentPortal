@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Education</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-dialog.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <script src="~/Scripts/js/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/js/bootstrap-datepicker.js"></script>   
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-dialog.js"></script>
+    <script src="~/Scripts/js/jquery.mCustomScrollbar.min.js"></script>
+</head>
+<body>
+    <!---------------------------header_logo---------------------->
+    <div class="header_logo">
+        <div class="container">
+            <div class="row">
+                <div class="logo"><a href="#"><img class="imgLogo" src="" alt="" /><span class="edu"></span> <span class="cent"></span></a></div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------header_logo---------------------->
+    <div class="Content">
+        @RenderBody()
+    </div>
+    <!------------------------footer---------------------------------->
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2016-2017 All Rights Reserved.  |  GEFingerPrints&trade;</p>
+        </div>
+    </div>
+    <!------------------------footer---------------------------------->
+    <!--sticky-->
+    <script>
+
+/* <![CDATA[ */
+
+    $(document).ready(function(){
+
+        /**
+         * This part does the "fixed navigation after scroll" functionality
+         * We use the jQuery function scroll() to recalculate our variables as the
+         * page is scrolled/
+         */
+        //$(window).scroll(function(){
+        //    var window_top = $(window).scrollTop() + 0; // the "12" should equal the margin-top value for nav.stick
+        //    var div_top = $('#menu-top_idf').offset().top;
+        //        if (window_top > div_top) {
+        //            $('#menu-section').addClass('stick');
+        //        } else {
+        //            $('#menu-section').removeClass('stick');
+        //        }
+        //});
+
+
+
+
+    });
+/* ]]> */
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+[5/11/2017 12:59:25 PM] : Could not find stored procedure 'USP_CheckTransportForAgencyt'.    [Family]     [CheckParentNameExist]
+
+[5/11/2017 1:00:21 PM] : Could not find stored procedure 'USP_CheckTransportForAgencyt'.    [Family]     [CheckParentNameExist]
+
+[5/11/2017 1:28:08 PM] : Parameter '@IsFullDay' was supplied multiple times.    [Family]     [SaveFamilyDetails]
+
+[5/11/2017 3:22:41 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:23:15 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:24:37 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:25:38 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:27:52 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:29:47 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:31:17 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:32:22 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:38:47 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:46:37 PM] : SMTP Exception caughtThe SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at    [SendMail]     [SendMessage]
+
+[5/11/2017 3:50:37 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 3:53:03 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 3:53:41 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 4:01:03 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 4:01:29 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 4:17:58 PM] : Object of type 'System.Byte[]' cannot be converted to type 'System.Nullable`1[System.Byte][]'.    [Family]     [CheckParentNameExist]
+
+[5/11/2017 4:24:14 PM] : Object of type 'System.Byte[]' cannot be converted to type 'System.Nullable`1[System.Byte][]'.    [Family]     [CheckParentNameExist]
+
+[5/11/2017 4:54:53 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 7:11:42 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 7:14:07 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/11/2017 7:29:19 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]

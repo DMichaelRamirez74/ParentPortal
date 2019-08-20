@@ -1,0 +1,4 @@
+
+[9/15/2017 2:26:23 PM] : Object reference not set to an instance of an object.    [Family]     [SaveFamilyDetails]
+
+[9/15/2017 2:29:54 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]

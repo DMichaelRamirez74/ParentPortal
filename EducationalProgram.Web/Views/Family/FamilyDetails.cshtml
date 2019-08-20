@@ -1,0 +1,1021 @@
+﻿
+@{
+    ViewBag.Title = "FamilyDetails";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!---------------------------parent_information---------------------->
+<div class="parent_info" id="parent_info_main">
+    <div class="container">
+        <div class="row">
+            <div class="inner_parent_info" id="sub_inner_parent_info">
+                <div class="sub_parent_lst">
+                    
+                    <form role="form" class="col-xs-12">
+                        <h2><img src="/Content/images/arw_icon.png" />Parent Information</h2>
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+
+
+                                <select class="form-control ddlPrimaryLanguage mandatory" id="ddlPrimaryLangauge" name="ddlPrimaryLanguage">
+                                    <option selected="selected" value="0">Primary Language Spoken</option>
+                                    <option value="1">English</option>
+                                    <option value="2">African Languages</option>
+                                    <option value="3">Caribbean Languages</option>
+                                    <option value="4">East Asian Languages</option>
+                                    <option value="5">European and Slavic Languages</option>
+                                    <option value="6">Middle Eastern &amp; South Asian Languages</option>
+                                    <option value="7">Native Central American, South American, and Mexican Languages</option>
+                                    <option value="8">Native North American/Alaska Native Languages</option>
+                                    <option value="9">Pacific Island Languages</option>
+                                    <option value="10">Spanish</option>
+                                    <option value="11">Unspecified</option>
+                                    <option value="12">Other</option>
+                                </select>
+                                <div class="err-container">
+                                    <span class="err-message">Primary language spoken is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        @*<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 dialectContainer" style="display:none;">
+                            <div class="left-inner-addon">
+
+
+                                <select class="form-control ddlState mandatory" id="ddlDialect" name="ddlDialect">
+                                    <option selected="selected" value="0">County/Dialect</option>
+                                
+                                </select>
+                                <div class="err-container">
+                                    <span class="err-message">County/Dialect is required</span>
+                                </div>
+                            </div>
+                        </div>*@
+
+
+                        @*<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 interepterContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Do you need an Interpreter?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Interpreter" id="rbInterpreterYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Interpreter" id="rbInterpreterNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-interpreter">Interpreter is required</span>
+                            </div>
+                        </div>*@
+
+
+
+
+                       
+
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon FullName">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtFirstName mandatory alphabets-only" placeholder="First Name" />
+                                <div class="err-container">
+                                    <span class="err-message">First Name is required</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtLastName mandatory alphabets-only" placeholder="Last Name" />
+                                <div class="err-container">
+                                    <span class="err-message">Last Name is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                <input type="text" class="txtDOB mandatory txt-date form-control" maxlength="10" placeholder="Date Of Birth" id="dpParentDate" />
+                                <div class="err-container">
+                                    <span class="err-message err-message-parentdob">Enter Valid Date</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-road" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtAddress mandatory" placeholder="Address" />
+                                <div class="err-container">
+                                    <span class="err-message">Address is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-building" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtAppartmentNo" placeholder="Apartment No., Lot No." />
+                                @*<div class="err-container">
+                                    <span class="err-message">Apartment number is required</span>
+                                </div>*@
+                            </div>
+                        </div>
+
+                        
+
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtZipCode mandatory number-only" placeholder="Zip Code" />
+                                <div class="err-container">
+                                    <span class="err-message">Zip Code is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+
+                                <select class="form-control ddlCity mandatory" id="ddlCity" name="City">
+                                    <option selected="selected" value="0">Select City</option>
+                                    
+                                </select>
+                                <div class="err-container">
+                                    <span class="err-message">City is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-university" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtState mandatory" disabled  placeholder="State" />
+                                @*@Html.DropDownList("ddlState", EducationalProgram.Web.Utilities.Common.states(), new { @class = "form-control ddlState mandatory" })*@
+                                <div class="err-container">
+                                    <span class="err-message">State is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtCounty mandatory" disabled placeholder="County" />
+                                <div class="err-container">
+                                    <span class="err-message">County is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtEmail mandatory" placeholder="Email" />
+                                <div class="err-container">
+                                    <span class="err-message err-message-email">Enter Valid Email</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon PhonenoContainer">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtPhoneNumber mandatory phone-number" placeholder="Phone" maxlength="14" />
+                                <div class="err-container">
+                                    <span class="err-message">Enter Valid Phone Number</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtExtension number-only" placeholder="Work Extension" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 TransportContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Do you need transportation?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-bus" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Transport" id="rbTransportYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Transport" id="rbTransportNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-transport">Transport is required</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 receivedChildSupportContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Have You worked or received child support in the past 12 months?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-child" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ReceivedChildSupport" id="rbreceivedChildSupportYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ReceivedChildSupport" id="rbreceivedChildSupportNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-receivedChildSupport">Worked or Received child support is required</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 taxReturnContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Parent has latest pay stubs, income statements, tax return to prove income?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="IncomeStatement" id="rbincomeStatementYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="IncomeStatement" id="rbincomeStatementNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-taxReturn">Option to prove tax return is required</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12">
+                            <div class="camera-container col-xs-12"  style="background-color:transparent;">
+
+
+
+
+                                <div class="app col-xs-12" style="text-align:center;">
+
+                                    <a href="javascript:void(0);" style="margin:auto;" class="start-camera">Take a snap to upload profile picture</a>
+
+                                    <video class="camera-stream"></video>
+                                    <img id="snap">
+
+                                    <p id="error-message"></p>
+
+                                    <div class="controls">
+                                        <a href="javascript:void(0);" class="delete-photo disabled" title="Delete Photo" ><i class="material-icons">delete</i></a>
+                                        <a href="javascript:void(0);" class="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                                        <a href="javascript:void(0);" class="switch-camera" title="Switch Camera"><i class="material-icons">switch_camera</i></a>
+                                    </div>
+
+                                    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+                                    <canvas></canvas>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_img"><img src="/Content/images/large_gra.png" /></div>
+</div>
+<!---------------------------parent_information---------------------->
+<!---------------------------parent_information---------------------->
+<div class="parent_info" id="book_info">
+    <div class="container">
+        <div class="row">
+
+
+
+            @*<div class="inner_parent_info child_info src_cont mCustomScrollbar ">
+                <div class="sub_parent_lst child_Info_container">
+                    <div style="width:80px;float:right;margin:0 10px 0 0;">
+                        <a class="close_icon"><img class="remove-child" src="~/Content/images/remove_icon.png" /></a>
+                    </div>
+                    <h2><img src="~/Content/images/arw_icon.png" />Child Information</h2>
+                    <form role="form">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon ChildFullName">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtChildFirstName mandatory alphabets-only" placeholder="First Name" />
+                                <div class="err-container">
+                                    <span class="err-message">First Name is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtChildLastName mandatory alphabets-only" placeholder="Last Name" />
+                                <div class="err-container">
+                                    <span class="err-message">Last Name is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                <input type="text" class="txtChildDOB mandatory txt-date form-control" maxlength="10" placeholder="Date Of Birth" id="dpChildDate" />
+                                <div class="err-container">
+                                    <span class="err-message err-message-childdob">Enter Valid Date</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Gender" id="rbMale" value="Male">
+                                        <label>Male</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Gender" id="rbFeMale" value="Female">
+                                        <label>Female</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-gender">Gender is required</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon rd_lst1" style="margin-bottom: 2px;">
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <div class="rd_lst_sub1">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbSuspected" value="Suspected">
+                                        <label>Suspected</label>
+                                    </div><div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbIEP" value="IEP">
+                                        <label>IEP</label>
+                                    </div> <div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbIFSP" value="IFSP">
+                                        <label>IFSP</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbNone" value="None">
+                                        <label>None</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-disablity">Disability is required</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 shotRecordsContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Have shot records available for this child?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ShotRecords" id="rbshotRecordsYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ShotRecords" id="rbshotRecordsNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-shotRecords">Shot records available is required</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <a class="add_link add_child" href="javascript:void(0)"><i class="fa fa-plus" aria-hidden="true"></i>Add another child to be considered for enrollment</a>
+                        </div>
+                    </form>
+                </div>
+            </div>*@
+
+
+
+
+
+            <div class="inner_parent_info src_cont mCustomScrollbar">
+             
+                  
+                    
+                   
+
+
+
+
+
+
+                     
+                        
+                <div class="sub_parent_lst child_sub_parent_list setmargin child_Info_container">
+
+
+                    <form role="form" class="col-xs-12">
+                        <h2>
+                            <img src="/Content/images/arw_icon.png" class="mCS_img_loaded">Child Information
+                        </h2>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon ChildFullName">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtChildFirstName mandatory alphabets-only" placeholder="First Name">
+                                <div class="err-container">
+                                    <span class="err-message" style="display: none;">First Name is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" class="form-control txtChildLastName mandatory alphabets-only" placeholder="Last Name">
+                                <div class="err-container">
+                                    <span class="err-message">Last Name is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon">
+                                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                <input type="text" class="txtChildDOB mandatory txt-date form-control" maxlength="10" placeholder="Date Of Birth" id="dpChildDate" />
+                                <div class="err-container">
+                                    <span class="err-message err-message-childdob">Enter Valid Date</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Gender" id="rbMale" value="Male">
+                                        <label>Male</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Gender" id="rbFeMale" value="Female">
+                                        <label>Female</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-gender">Gender is required</span>
+                            </div>
+                        </div>
+
+
+                        @*<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="left-inner-addon rd_lst1" style="margin-bottom: 2px;">
+                        <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                        <div class="rd_lst_sub1">
+                            <div class="radio radio-info">
+                                <input type="radio" name="Disability" id="rbSuspected" value="Suspected">
+                                <label>Suspected</label>
+                            </div><div class="radio radio-info">
+                                <input type="radio" name="Disability" id="rbIEP" value="IEP">
+                                <label>IEP</label>
+                            </div> <div class="radio radio-info">
+                                <input type="radio" name="Disability" id="rbIFSP" value="IFSP">
+                                <label>IFSP</label>
+                            </div>
+                            <div class="radio radio-info">
+                                <input type="radio" name="Disability" id="rbNone" value="None">
+                                <label>None</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="err-container col-xs-12" style="padding:0;">
+                        <span class="err-message err-message-disablity">Disability is required</span>
+                    </div>
+                </div>*@
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="left-inner-addon rd_lst1" style="margin-bottom: 2px;">
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <div class="rd_lst_sub1">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbSuspected" value="Suspected">
+                                        <label>Suspected</label>
+                                    </div>
+
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="Disability" id="rbNone" value="None">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-disablity" style="display: none;">Disability is required</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 shotRecordsContainer">
+                            <label style="color: #ffffff;font-weight: 500 !important;">Have shot records available for this child?</label>
+                            <div class="left-inner-addon rd_lst" style="margin-bottom: 2px;">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <div class="rd_lst_sub">
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ShotRecords" id="rbshotRecordsYes" value="1">
+                                        <label>Yes</label>
+                                    </div>
+                                    <div class="radio radio-info">
+                                        <input type="radio" name="ShotRecords" id="rbshotRecordsNo" value="0">
+                                        <label>No</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="err-container col-xs-12" style="padding:0;">
+                                <span class="err-message err-message-shotRecords">Shot records available is required</span>
+                            </div>
+                        </div>
+
+
+                        @*<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">*@
+
+                        <div class="col-xs-12">
+
+
+                            @*<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12"></div>*@
+
+                            @*<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 upload-img-blk" style="cursor:pointer;">
+                        <div class="left-inner-addon upload-img-blk_cont">
+                            <img src="/Content/images/upload_arrow.png" alt="" class="mCS_img_loaded">
+                            <span class="blk_cont">Upload profile picture</span>
+
+                            <input class="form-control file-upload" accept="image/*" type="file" style="display:none;">
+                            <input type="hidden" id="convertedImage" />
+                        </div>
+                        <div class="left-inner-addon uploaded-img-blk" style="display:none;">
+                            <img src="images/mom.png" alt="" class="mCS_img_loaded">
+
+                            <div class="col-xs-12" style="padding-top:15px;">
+                                <div class="col-xs-6">
+                                    <i class="fa fa-trash  btn-delete-img" aria-hidden="true" data-toggle="tooltip" style="cursor:pointer; font-size :18px;background :#e74c3c;color :#fff;padding :7px 12px;border-radius: 7px;margin-right :8px;" title="Delete picture"></i>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <i class="fa fa-edit btn-edit-img" data-toggle="tooltip"  style="cursor:pointer;color:#fff;background: green;padding :7px 12px;border-radius :6px;font-size :18px;" title="Edit picture" ></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>*@
+
+
+                            @*<div class="col-xs-12 camera-select-div hidden">
+                        <select id="cameraSelect" class="form-control" style="margin-bottom:20px;"></select>
+
+                    </div>*@
+
+
+                            <div class="camera-container col-xs-12" style="text-align:center;display:none;">
+
+
+
+
+                                <div class="app col-xs-12">
+
+                                    <a href="javascript:void(0);" class="start-camera">Take a snap to upload profile picture</a>
+
+                                    <video class="camera-stream"></video>
+                                    <img id="snap">
+
+                                    <p id="error-message"></p>
+
+                                    <div class="controls">
+                                        <a href="javascript:void(0);" class="delete-photo disabled" title="Delete Photo"><i class="material-icons">delete</i></a>
+                                        <a href="javascript:void(0);" class="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
+                                        <a href="javascript:void(0);" class="switch-camera" title="Switch Camera"><i class="material-icons">switch_camera</i></a>
+                                    </div>
+
+                                    <!-- Hidden canvas element. Used for taking snapshot of video. -->
+                                    <canvas></canvas>
+
+                                </div>
+
+                            </div>
+
+
+                            @*   <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12"></div>*@
+
+
+                        </div>
+
+
+
+                        @*  *@
+
+                        @*<div style="width: 100%; height: 180px; overflow: hidden">
+                    <img id="file1" src="/Content/images/upload_arrow.png" class="patImg" height="175">
+                    <input type="hidden" id="fileimg" value="epractice637006794251938764.png" autocomplete="off">
+                    <input id="ImageName" name="ImageName" type="hidden" value="epractice637006794251938764.png" autocomplete="off">
+                </div>*@
+                        @*  *@
+
+
+                        @*</div>*@
+
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <a class="add_link" href="javascript:void(0);">
+                                <i class="fa fa-plus" aria-hidden="true"></i>add another child to be considered for enrollment
+                            </a>
+                        </div>
+
+
+
+
+                    </form>
+
+
+
+                </div>
+
+
+              
+
+
+                    
+               @*     <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div>*@
+                
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="info_img_upload_modal" role="dialog">
+    <div class="modal-dialog modal-img-upload">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Image Upload</h4>
+            </div>
+            <div class="modal-body">
+                <div class="radio radio-info">
+                    <input type="radio" name="yn" id="yn" value="mail">
+                    <label>USing Gallery</label>
+                </div>
+                <div class="radio radio-info">
+                    <input type="radio" name="yn" id="yn" value="mail">
+                    <label>USing Images</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-ok">OK</button>
+                <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*@{ 
+    Html.RenderPartial("~/Views/Family/_FileInput_CameraUploadPartial.cshtml");
+}*@
+
+<!---------------------------parent_information---------------------->
+<!---------------------------location_Request---------------------->
+<div class="location_Request">
+    <div class="container">
+        <div class="location_section">
+            <div class="location_header">
+                <h4>LOCATION REQUEST</h4>
+                <img src="/Content/images/small_gra.png" />
+            </div>
+
+            <div class="checkbox_lst">
+                <div class="checkbox forget_answer">
+                    <input id="chkHomeBased" name="LocationStatus" class="chkLocationStatus" value="Home Based" type="checkbox">
+                    <label for="test3">Home Based</label>
+                </div>
+                <div class="checkbox forget_answer">
+                    <input id="chkPartyDay" name="LocationStatus" class="chkLocationStatus" value="Party Day" type="checkbox">
+                    <label for="chk">Part Day</label>
+                </div>
+                <div class="checkbox forget_answer">
+                    <input id="chkFullDay" name="LocationStatus" class="chkLocationStatus" value="Full Day" type="checkbox">
+                    <label for="test5">Full Day</label>
+                </div>
+                <div class="checkbox forget_answer">
+                    <input id="chkSchoolDay" name="LocationStatus" class="chkLocationStatus" value="School Day" type="checkbox">
+                    <label for="test5">School Day</label>
+                </div>
+                <div class="err-container">
+                    <span class="err-message err-message-location">Class type is required</span>
+                </div>
+            </div>
+
+            <div class="loct_form" style="display:none;">
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 primary">
+                    <label>The primary center I am interested in is</label>
+                    <span class="add_sec country-dropdown">
+                        @Html.DropDownList("ddlPrimaryCenter", EducationalProgram.Web.Utilities.Common.GetCenter(new Guid(Request.QueryString["AgencyId"])), new { @class = "form-control" })
+                    </span>
+                    <div class="err-container">
+                        <span class="err-message err-message-primary">Primary Center is required</span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12">
+                    <span style="color:#f9bc51;font-family:verdana;" class="new">(Or)</span>
+                </div>
+                <div class="col-md-5 col-lg-5 col-sm-5 col-xs-12 secondary">
+                    <label>Second choice</label>
+                    <span class="add_sec country-dropdown">
+                        @Html.DropDownList("ddlSecondaryCenter", EducationalProgram.Web.Utilities.Common.GetCenter(new Guid(Request.QueryString["AgencyId"])), new { @class = "form-control" })
+                    </span>
+                    <div class="err-container">
+                        <span class="err-message err-message-secondary">Second choice is required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <b>
+                        <label></label>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @*<div class="g-recaptcha" data-sitekey="6LeXygATAAAAAI7s-Xq_BuDxPYptBpvilgXAXntj"></div>*@
+                    @*<div class="g-recaptcha" data-sitekey="6LdE8SAUAAAAAAcMxulr_PSB1-H08QBSeeR-vpCl"></div>*@
+                    @*<div class="g-recaptcha" data-sitekey="6LcTxqoUAAAAAAhkcLtDprP0706cFraJNXYyHID5"></div>*@
+                    <div class="g-recaptcha" data-sitekey="6LdS-LEUAAAAAAwZ2BNMc_vBOH79hxSL_gd5RcEL"></div>
+                    <div class="err-container">
+                        <span class="err-message err-message-robo"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <div class="loc_btns">
+            <div class="loczation-search"><a class="btnSave" href="javascript:void(0)">Submit</a></div>
+            <div class="loczation-search"><a class="btnClear" href="javascript:void(0)">Clear</a></div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hdnMarker" />
+<!---------------------------location_Request---------------------->
+<!------------------------info_map---------------------------------->
+<div id="googleMap" style="width:100%; height:400px;"></div>
+<!------------------------info_map---------------------------------->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmation Message</h4>
+            </div>
+            <div class="modal-body">
+                <p class="msg-content">Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <i class="fa fa-android"></i>
+</div>
+
+<div class="loader-wrapper" id="isBusy" style="display:none;">
+    <div id="loader"></div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwOaG90XeU32JAFAjsx8TO2HQIEK983lY&libraries=places&callback=initMap" async defer></script>
+
+<script type="text/javascript">
+    //Google Map
+    var markers = []; var object = {};
+    var map;
+    var infowindow;
+    function initMap() {
+        var pyrmont = { lat: 30.1378388, lng: -112.1335957 };
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: pyrmont,
+            zoom: 5
+        });
+    }
+    function LoadMap() {
+        setTimeout(function () {
+            var mapOptions = {
+                center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                zoom: 50,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var infoWindow = new google.maps.InfoWindow();
+            var latlngbounds = new google.maps.LatLngBounds();
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+            var i = 0;
+            var interval = setInterval(function () {
+                var data = markers[i]
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                var icon = "";
+                switch (data.type) {
+                    case "Parent":
+                        icon = "red";
+                        break;
+                    case "PrimaryCenter":
+                        icon = "blue";
+                        break;
+                    case "SecondaryCenter":
+                        icon = "yellow";
+                        break;
+                    case "Additional":
+                        icon = "green";
+                        break;
+                }
+                icon = "https://maps.google.com/mapfiles/ms/icons/" + icon + ".png";
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title,
+                    animation: google.maps.Animation.DROP,
+                    icon: new google.maps.MarkerImage(icon)
+                });
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        infoWindow.setContent(data.description);
+                        infoWindow.open(map, marker);
+                    });
+                })(marker, data);
+                latlngbounds.extend(marker.position);
+                i++;
+                if (i == markers.length) {
+                    clearInterval(interval);
+                    var bounds = new google.maps.LatLngBounds();
+                    map.setCenter(latlngbounds.getCenter());
+                    map.fitBounds(latlngbounds);
+                }
+            }, 80);
+        }, 700);
+    }
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+
+    }
+
+
+    window.onload = function () {
+        //Google Map
+        debugger;
+        $.ajax({
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            type: "POST",
+            url: "/Family/GetCenterAddressDetail",
+            async: false,
+            success: function (data) {
+                $(data).each(function (i, val) {
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ 'address': val.Address }, function (results, status) {
+
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            var x = results[0].geometry.location.lat();
+                            var y = results[0].geometry.location.lng();
+                            object = {
+                                "title": val.Address,
+                                "lat": x,
+                                "lng": y,
+                                "description": val.CenterName,
+                                "type": 'PrimaryCenter'
+                            };
+                            markers.push(object);
+                        }
+                    });
+                });
+                LoadMap();
+            },
+            error: function () {
+
+            }
+        });
+
+    };
+
+</script>
+<script src="~/Scripts/js/FamilyScript.js"></script>
+
+
+
+
+
+
+
+

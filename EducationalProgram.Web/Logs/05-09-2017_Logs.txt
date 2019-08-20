@@ -1,0 +1,18 @@
+
+[5/9/2017 3:53:41 PM] : Unrecognized Guid format.    [Family]     [SendEmailForFSW]
+
+[5/9/2017 3:54:20 PM] : Unrecognized Guid format.    [Family]     [SendEmailForFSW]
+
+[5/9/2017 5:19:24 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/9/2017 5:20:13 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/9/2017 5:38:21 PM] : Object reference not set to an instance of an object.    [Family]     [GetCenterAddressDetail]
+
+[5/9/2017 5:38:35 PM] : Object reference not set to an instance of an object.    [Family]     [GetCenterAddressDetail]
+
+[5/9/2017 5:40:09 PM] : Object reference not set to an instance of an object.    [Family]     [GetCenterAddressDetail]
+
+[5/9/2017 5:44:36 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]
+
+[5/9/2017 6:57:53 PM] : Mail successfully sent to registered email id    [SendMail]     [SendMessage]

@@ -1,0 +1,9 @@
+
+[16-08-2019 12:48:21] : Buffer cannot be null.
+Parameter name: buffer    [Family]     [CheckParentNameExist]
+
+[16-08-2019 17:10:03] : Mapper already initialized. You must call Initialize once per application domain/process.    [Family]     [SaveFamilyDetails]
+
+[16-08-2019 17:10:13] : Mapper already initialized. You must call Initialize once per application domain/process.    [Family]     [SaveFamilyDetails]
+
+[16-08-2019 18:48:44] : Mapper already initialized. You must call Initialize once per application domain/process.    [Family]     [SaveFamilyDetails]
